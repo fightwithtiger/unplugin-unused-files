@@ -1,1 +1,3 @@
-document.getElementById('app')!.innerHTML = '__UNPLUGIN__'
+import { getContent } from './src/index'
+
+document.getElementById('app')!.innerHTML = getContent()

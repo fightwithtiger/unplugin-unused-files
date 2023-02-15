@@ -1,7 +1,9 @@
 import { describe, expect, it } from 'vitest'
+import { getAllFiles } from '../src/core'
 
-describe('index', () => {
-  it('hi vitest', () => {
-    expect(1).toBe(1)
+describe('getAllFiles', () => {
+  it('src', () => {
+    const files = getAllFiles('src')
+    expect(files).toMatchSnapshot()
   })
 })

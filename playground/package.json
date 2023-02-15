@@ -1,7 +1,11 @@
 {
   "private": true,
   "scripts": {
-    "dev": "nodemon -w '../src/**/*.ts' -e .ts -x vite"
+    "dev": "nodemon -w '../src/**/*.ts' -e .ts -x vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.7"
   },
   "devDependencies": {
     "vite": "^4.0.0",

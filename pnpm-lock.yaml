@@ -41,8 +41,11 @@ importers:
 
   playground:
     specifiers:
+      dayjs: ^1.11.7
       vite: ^4.0.0
       vite-plugin-inspect: ^0.7.10
+    dependencies:
+      dayjs: 1.11.7
     devDependencies:
       vite: 4.0.0_@types+node@18.11.13
       vite-plugin-inspect: 0.7.10_rollup@3.7.3+vite@4.0.0
@@ -1162,6 +1165,10 @@ packages:
     engines: {node: '>=4'}
     hasBin: true
     dev: true
+
+  /dayjs/1.11.7:
+    resolution: {integrity: sha512-+Yw9U6YO5TQohxLcIkrXBeY73WP3ejHWVvx8XCk3gxvQDCTEmS48ZrSZCKciI7Bhl/uCMyxYtE9UqRILmFphkQ==}
+    dev: false
 
   /debug/3.2.7:
     resolution: {integrity: sha512-CFjzYYAi4ThfiQvizrFQevTTXHtnCqWfe7x1AhgEscTz6ZbLbfoLRLPugTQyBth6f8ZERVUSyWHFD/7Wu4t1XQ==}

@@ -1,0 +1,16 @@
+// Vitest Snapshot v1
+
+exports[`getAllFiles > src 1`] = `
+[
+  "E:\\\\work\\\\project\\\\published\\\\unplugin-starter\\\\src\\\\core\\\\constant.ts",
+  "E:\\\\work\\\\project\\\\published\\\\unplugin-starter\\\\src\\\\core\\\\index.ts",
+  "E:\\\\work\\\\project\\\\published\\\\unplugin-starter\\\\src\\\\core\\\\transform.ts",
+  "E:\\\\work\\\\project\\\\published\\\\unplugin-starter\\\\src\\\\esbuild.ts",
+  "E:\\\\work\\\\project\\\\published\\\\unplugin-starter\\\\src\\\\index.ts",
+  "E:\\\\work\\\\project\\\\published\\\\unplugin-starter\\\\src\\\\nuxt.ts",
+  "E:\\\\work\\\\project\\\\published\\\\unplugin-starter\\\\src\\\\rollup.ts",
+  "E:\\\\work\\\\project\\\\published\\\\unplugin-starter\\\\src\\\\types.ts",
+  "E:\\\\work\\\\project\\\\published\\\\unplugin-starter\\\\src\\\\vite.ts",
+  "E:\\\\work\\\\project\\\\published\\\\unplugin-starter\\\\src\\\\webpack.ts",
+]
+`;

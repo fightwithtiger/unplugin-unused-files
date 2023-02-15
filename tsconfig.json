@@ -7,6 +7,10 @@
     "esModuleInterop": true,
     "strict": true,
     "strictNullChecks": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "paths": {
+      "@/*": ["./playground/src/*"],
+      "util/*": ["./playground/src/util/*"]
+    }
   }
 }
