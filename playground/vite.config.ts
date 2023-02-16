@@ -19,9 +19,9 @@ export default defineConfig({
     Unplugin({
       // target: '',
       // target: resolve(__dirname, './src'),
-      target: /src[\\/]util/,
+      // target: /src[\\/]util/,
       // target: [/src[\\/]util/, resolve(__dirname, './src')],
-      excludes: ['shared/**'],
+      // external: ['.ts', '.css'],
     }),
   ],
 })

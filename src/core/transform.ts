@@ -1,13 +1,21 @@
 import fs from 'fs'
-import { resolve } from 'path'
-import type { Options, TargetType } from '../types'
+import { extname, resolve } from 'path'
+import type { TargetType, UnpluginOptions } from '../types'
 import { ROOT, SYSTEM_SEP } from './constant'
 
 const loadedFiles: string[] = []
 let targetRegs: RegExp[]
 
-export function getUnusedFiles() {
-  const allFiles = getAllFiles()
+export function getUnusedFiles(options: UnpluginOptions) {
+  const { external } = options
+  let allFiles = getAllFiles()
+  if (external.length > 0) {
+    allFiles = allFiles.filter((file) => {
+      const suffix = extname(file)
+      return external.includes(suffix)
+    })
+  }
+
   const processedFiles = allFiles.filter((file) => {
     let flag = false
     for (const reg of targetRegs) {
@@ -32,19 +40,19 @@ export function getAllFiles(dir: string = ROOT) {
         const more = getAllFiles(pth)
         allFiles.push(...more)
       } else {
-        allFiles.push(pth)
+        allFiles.push(fixPath(pth))
       }
     })
 
     return allFiles
   } catch (err) {
-    console.error(err)
+    console.error(`unplugin-unused-files error: ${JSON.stringify(err)}`)
     return []
   }
 }
 
-export function mark(id: string, options: Options | undefined) {
-  const { target = 'src' } = options || {} as Options
+export function mark(id: string, options: UnpluginOptions) {
+  const { target } = options
   targetRegs = getTargetRegs(target)
   const path = fixPath(id)
   for (const reg of targetRegs) {
