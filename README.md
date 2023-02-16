@@ -5,8 +5,32 @@
 ## Install
 
 ```bash
-npm i unplugin-unused-files
+npm i unplugin-unused-files -D
 ```
+
+## Description
+
+To find unused files during packaging, only searches in the src directory within the project are supported. And you can use the option to customize any directory or file under src directory.
+
+```ts
+type TargetType = string | RegExp | Array<string | RegExp>
+
+interface Options {
+  target?: TargetType // Specifies the scope of the search, support RE, path, or array, default(src)
+  external?: string[] // Specifies the file suffix to search for, , default(src)
+}
+```
+
+## Example
+
+```ts
+// target: resolve(__dirname, './src'),
+// target: /src[\\/]util/,
+// target: [/src[\\/]util/, resolve(__dirname, './src')],
+// external: ['.ts', '.css'],
+```
+
+## Usage
 
 <details>
 <summary>Vite</summary><br>
